@@ -7,9 +7,14 @@
 6, 1, 33 -> [6, 1, 33]
 */
 
-Console.WriteLine("Введите массив:");
-
-for (int i = 0; i < 8; i++)
+int[] GetBinaryArray(int size)
 {
-    Console.Write($"Массив: [{String.Join(", ", array)}");
+    int[] result = new int[size];
+    for (int i = 0; i < result.Length; i++)
+    {
+        result[i] = new Random().Next();
+    }
+    return result;
 }
+int[] newArray = GetBinaryArray(8);
+Console.WriteLine($"Массив: [ {String.Join(", ", newArray)}]");
